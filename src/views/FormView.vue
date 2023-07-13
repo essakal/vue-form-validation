@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>form validation</h1>
-    <form action="" @submit="sub">
+    <form action="" @submit.prevent="sub">
       <div class="form-group">
         <label for="username">Username</label>
         <input
@@ -121,7 +121,6 @@ export default {
           this.err.pass1 = false;
           this.err.pass2 = false;
           this.err.vpass = false;
-          console.log("fffff");
           this.username = "";
           this.email = "";
           this.sexe = "";
